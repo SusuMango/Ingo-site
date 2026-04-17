@@ -42,7 +42,7 @@ nav {
 .topnav a {
   color: #f2f2f2;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 17px;  
   font-weight: 600;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -55,7 +55,7 @@ nav {
 .topnav a.active {
   
   font-weight: bold;
-  color: plum;
+  color: rgb(17, 0, 255);
 }
 
 .me {
@@ -65,9 +65,10 @@ nav {
   flex-direction: column;
   align-items: center;
   
+  
   padding-top: 20vh;  
   text-align: center;
-  background: url('lantern.jpeg') center/cover no-repeat;
+  background: url('swimcover.jpeg') center/cover no-repeat;
   animation: rise 1.2s ease-out forwards;
   position: relative;
   
@@ -75,7 +76,18 @@ nav {
   --overlay-opacity: 0.2;
 }
 
-
+.bg-animation {
+        position: absolute;
+        padding-top : 200px;
+        
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
 
   
  
@@ -92,6 +104,7 @@ nav {
   animation: darkenOverlay linear forwards;
   animation-timeline: scroll(); 
   animation-range: entry 0% exit 100%;
+  
 }
 
 .me h1,
@@ -110,6 +123,7 @@ nav {
   margin-bottom: 16px;
   animation: rise 1.2s ease-out forwards;
   animation-delay: 0.4s;
+  color : black;
 }
 
 .me h1 {
@@ -172,7 +186,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #8f0094, hsl(308, 84%, 63%), #dba0e7, #786386);
+  background: linear-gradient(270deg, #000f94, hsl(182, 84%, 63%), #a0d1e7, #00158d);
   animation: colorShift 20s linear infinite;
   z-index: -1;
   
@@ -187,3 +201,14 @@ nav {
   to { opacity: 1; }
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute; 
+  min-width: 160px;
+  z-index: 1;        
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
